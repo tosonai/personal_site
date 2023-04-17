@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temitayo Sonaike - Web Developer</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+		header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+		}
+		nav {
+			display: flex;
+		}
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			padding: 10px;
+			margin: 0 10px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+		nav a:hover {
+			background-color: #fff;
+			color: #333;
+		}
+		.tabs {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			padding: 20px;
+			background-color: #f9f9f9;
+			box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+		}
+		.tab {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		.tab:hover {
+			background-color: #ddd;
+		}
+		.tab img {
+			max-width: 100%;
+		}
+		.tab h2 {
+			margin: 10px 0 0;
+		}
+		.tab p {
+			margin: 5px 0 0;
+		}
+		.contact-info {
+			margin: 50px auto;
+			max-width: 600px;
+			text-align: center;
+		}
+		.contact-info p {
+			margin: 10px 0;
+		}
+		.resume {
+			margin: 50px auto;
+			max-width: 600px;
+			text-align: center;
+		}
+		.resume a {
+			display: inline-block;
+			background-color: #333;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 5px;
+			text-decoration: none;
+			transition: background-color 0.3s ease;
+		}
+		.resume a:hover {
+			background-color: #fff;
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Temitayo Sonaike - Web Developer</h1>
+
+        <nav>
+			<a href="#about">About</a>
+			<a href="#contact">Contact</a>
+			<a href="#portfolio">Portfolio</a>
+		</nav>
+	</header>
+	
+	<section class="tabs" id="tabs">
+		<div class="tab" id="about">
+			<img src="https://via.placeholder.com/300x300.png?text=About" alt="About">
+			<h2>About</h2>
+			<p>Hi, i love to design for the web. If you need anything, get in touch. </p>
+		</div>
+		<div class="tab" id="contact">
+			<img src="https://via.placeholder.com/300x300.png?text=Contact" alt="Contact">
+			<h2>Contact</h2>
+			<div class="contact-info">
+				<p>Email: <a href="mailto:tayosonaike@yahoo.com">tayosonaike@yahoo.com</a></p>
+				<p>Phone: 832-894-2735</p>
+			</div>
+		</div>
+		<div class="tab" id="portfolio">
+			<img src="https://via.placeholder.com/300x300.png?text=Portfolio" alt="Portfolio">
+			<h2>Portfolio</h2>
+			<div class="resume">
+				<a href="https://drive.google.com/uc?id=1SmdSGPmH4uYr5H1wYPBr9swMVCKWKJxD" target="_blank">View Resume</a>
+			</div>
+		</div>
+	</section>
+	<script>
+		// Add active class to the current button (highlight it)
+		var header = document.getElementById("tabs");
+		var tabs = header.getElementsByClassName("tab");
+		for (var i = 0; i < tabs.length; i++) {
+			tabs[i].addEventListener("click", function() {
+				var current = document.getElementsByClassName("active");
+				if (current.length > 0) { 
+					current[0].className = current[0].className.replace(" active", "");
+				}
+				this.className += " active";
+			});
+		}
+	</script>
+</body>
+</html>
+
+		
